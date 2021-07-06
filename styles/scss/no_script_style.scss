@@ -1,0 +1,115 @@
+//colors
+$menu_down_color: #3d51f8;
+$navbar_border_color: #555;
+$active_menu_color: white;
+$navbar_color:  blue;
+
+//fonts
+$font_0: Verdana;
+$font_1: Arial;
+$font_2: Helvetica;
+$font_3: sans-serif;
+
+.container {
+	display: none;
+	visibility: hidden;
+}
+.menuBlock {
+	display: none;
+	visibility: hidden;
+}
+@mixin navbar_style {
+	padding: inherit;
+	color: $active_menu_color;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: $font_0, $font_1, $font_2, $font_3;
+	top: auto;
+	text-align: center;
+	display: inline-block;
+	border-bottom: 3px solid transparent;
+	&:hover {
+		border-bottom: 3px solid $navbar_color;
+	}
+}
+@mixin ul_style {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+@mixin li_style_phones {
+	text-align: center;
+	border-bottom: 1px solid $active_menu_color;
+}
+@mixin menu_common {
+	width: 100%;
+	list-style-type: none;
+	background-color: $menu_down_color;
+	top: 0;
+	border: 1px solid $navbar_border_color;
+}
+@media only screen and(min-width: 375px) and(max-width: 812px) and(orientation: landscape) {
+	.menuDisabled {
+		flex-direction: column;
+		text-align: center;
+		overflow: auto;
+		position: sticky;
+		@include menu_common;
+		ul {
+			@include ul_style;
+		}
+		a {
+			@include navbar_style;
+		}
+		li {
+			@include li_style_phones;
+		}
+	}
+}
+@media only screen and(min-width: 375px) and(max-width: 812px) and(orientation: portrait) {
+	.menuDisabled {
+		flex-direction: column;
+		text-align: center;
+		overflow: auto;
+		position: sticky;
+		margin-top: auto;
+		@include menu_common;
+		ul {
+			@include ul_style;
+		}
+		a {
+			@include navbar_style;
+		}
+		li {
+			@include li_style_phones;
+		}
+	}
+}
+@media screen and(min-width: 813px) {
+	.menuDisabled {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		text-align: center;
+		overflow: auto;
+		@include menu_common;
+		ul {
+			@include ul_style;
+		}
+		li {
+			float: left;
+		}
+		a {
+			width: 200px;
+			line-height: 25px;
+			@include navbar_style;
+		}
+	}
+}
+@function calculate-rem($base, $exponent) {
+	$result: 1;
+	@for $_ from 1 through $exponent {
+	  $result: $result * $base;
+	}
+	@return $result;
+}

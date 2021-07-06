@@ -1,0 +1,114 @@
+//colors
+$article_text_color: white;
+$article_background_color: ghostwhite;
+$article_background_color_desktop: cornflowerblue;
+$article_text_color_desktop: darkblue;
+
+//urls
+$url_0: url(background_hobbies.JPG);
+
+@mixin important-text {
+	color: red;
+	font-size: 25px;
+	font-weight: bold;
+	border: 1px solid blue;
+  }
+  
+  .danger {
+	@include important-text;
+	background-color: green;
+  }
+
+@mixin display_photo_mobile {
+	display: none;
+}
+
+@media only screen and(min-width: 375px) and(max-width: 812px) and(orientation: landscape) {
+	main {
+		flex: 80%;
+		background-color: $article_text_color;
+		padding: 10px;
+	}
+	article {
+		flex: 20%;
+		background-color: $article_background_color;
+		padding: 1px;
+		* {
+			font-size: 20px;
+			margin-left: 5px;
+		}
+	}
+	.column {
+		flex: 50%;
+		max-width: 100%;
+	}
+	img {
+		display: grid;
+		margin-top: 8px;
+		vertical-align: text-top;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	img[id^="optionalstuff"] {
+		@include display_photo_mobile;
+	}
+}
+@media only screen and(min-width: 375px) and(max-width: 812px) and(orientation: portrait) {
+	main {
+		margin-top: 30px;
+		flex: 70%;
+		background-color: $article_text_color;
+		padding: 5px;
+	}
+	article {
+		padding: 1px;
+		float: right;
+		width: 100%;
+		margin-top: 10px;
+		margin-right: auto;
+		margin-left: auto;
+		font-size: 15px;
+		background-color: $article_background_color;
+		* {
+			font-size: 15px;
+			margin-left: 5px;
+		}
+	}
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+	img {
+		margin-top: 8px;
+		vertical-align: middle;
+		width: 100%;
+	}
+	img[id^="optionalstuff3"] {
+		@include display_photo_mobile;
+	}
+}
+@media screen and(min-width: 813px) {
+	body {
+		background-image: $url_0;
+	}
+	article {
+		flex: 20%;
+		background-color: $article_background_color_desktop;
+		padding: 20px;
+		color: $article_text_color_desktop;
+		opacity: .9;
+	}
+	.column {
+		flex: 25%;
+		max-width: 50%;
+		padding: 4px;
+	}
+	img {
+		margin-top: 4px;
+		margin-left: 2px;
+		vertical-align: middle;
+		border-radius: 5%;
+		width: 100%;
+	}
+}
