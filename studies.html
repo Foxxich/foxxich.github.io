@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel = "stylesheet" href="styles/css/basic_style.css">
+        <link rel = "stylesheet" href="styles/css/basic_style_studies.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Studies</title>
+    </head>
+    
+    <body>  
+        <div class="header">
+            <h1>LISS</h1>
+        </div>
+        
+        <div class="container">
+            <a href="#home" class="active" style="text-align:center">Menu</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+              <a href="index.html" style="text-align:center">Home</a>
+              <a href="hobbies.html" style="text-align:center">My hobbies</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <link rel="stylesheet" href="styles/css/basic_script_style.css">
+        
+        <script type="text/javascript" src="index.js"></script>
+        <div class="menuBlock">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hobbies.html">My hobbies</a></li>
+                </ul>
+        </div>
+            <noscript>
+                <div class="menuDisabled">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="hobbies.html">My hobbies</a></li>
+                    </ul>
+                    <link rel = "stylesheet" href="styles/css/basic_no_script_style.css">
+                </div>
+          </noscript>
+        
+        <div class="row">
+        <aside>
+            <h2>My main reasearch interests</h2>
+            <p>
+                &emsp;I like different reasearch and science fields of Math and programming, but my favourite spheres of interest are
+                databases(hashing and normalization), programming in Java(sorting algorithms, Android apps), Math Analysis and 
+                HTML + CSS.
+            </p>
+            <h3>More details about these fields:</h3>
+            <p>
+                &emsp;I like learning about databases because of many things. First, everyone uses and needs databases for different purposes. 
+                Secondly, there are different dialects and other details, which encourage me to learn new fields of databases. 
+                For example, usage of MySQL with Java, normalization of databases from different views. Although I have been learning this subject just for 4 months, 
+                I got a big pleasure after discovering many new things in this sphere of informatics.
+            </p>
+            <p>
+                &emsp;I enjoy programming in Java. I think it would be enough just to use these words for describing of me &#128187;. 
+                This programming language is universal, easy-to-learn and very useful. I can’t imagine my life of as programmer/informatics/Math without Java. 
+                I also like Python and C, but Java is my favourite programming language.
+            </p>
+            <p>
+                &emsp;I studied Math Analysis two years ago. Since that time, it is my favourite subject from point of Math. 
+                Although this field of science is not hard-to-learn, we can use it many times for doing many tasks. Such as: making algorithms, counting and describing of complexity.  
+            </p>
+            <p>
+                &emsp;I just started learning HTML+CSS, but it looks as very interesting part. Friendly speaking I am not good at designing, but I would like to try myself in learning of HTML, CSS and JavaScript. 
+                Also there are many resources for learning of all these things.
+            </p>
+            <hr>
+            <h2>List of all projects:</h2>
+            <Ol>
+                <li>Paint in Java</li>
+                <li>Generic trees in Java</li>
+                <li>Database app in Java</li>
+                <li>Mobile app in Java</li>
+                <li>Debugging code of J.Ferrerra in Java</li>
+                <li>Shell in C</li>
+                <li>Sorting algorithms in C</li>
+                <li>Mobile app in Kotlin</li>
+                <li>Diffie–Hellman key exchange in Java</li>
+                <li>Search of primary numbers in Marie</li>
+                <li>ROM creating in simulator</li>
+                <li>TO-BE CONTINUE</li>
+            </Ol>
+        </aside>
+        <main>
+            <h1>On this page you can read about my studies</h1>
+            <section>
+            <h2>My best projects</h2>
+            <h3>Databases app</h3>
+                <p>I and my partner created a program with some functionalities of Excel. Friendly speaking, it was so
+                    unimaginable to realise that program works, data is inserted to database and there aren't any lugs or bugs.
+                    I liked both work with SQL and Java. The hardest process to-do was the generic class of all the objects. We
+                    spent days thinking about the solution and how to solve it in recent adn best way.
+                </p>
+            </section>
+            <pre id="optionalstuffcode1"><code>
+            DELIMITER //
+            DROP PROCEDURE IF EXISTS addElement;    #procedura istnieje dla tego, zeby dodac towar do tabeli „element_zamowienia”
+            CREATE PROCEDURE addElement(zamowienieId INT, 
+            elementCenaProduktu DECIMAL(10,2),	elementIlosc INT, elementIdProduktu INT, elementZnizka INT)	
+            BEGIN
+            IF (SELECT EXISTS(SELECT * FROM zamowienia WHERE zamowienia.Id = zamowienieId)=1) THEN #sprawdzamy,czy istnieje zamowienie z podanym id w bazie
+	           START TRANSACTION;
+	           IF ((SELECT towar.Dostepnosc FROM towar WHERE towar.Id = elementIdProduktu) >= elementIlosc) THEN
+		      INSERT INTO element_zamowienia (element_zamowienia.Id_zamowienia,	#gdy istnieje, to robimy insert
+		      element_zamowienia.Cena_produktu, element_zamowienia.Ilosc_produktow,
+		      element_zamowienia.Id_produktu,element_zamowienia.Znizka)
+		      VALUES (zamowienieId,elementCenaProduktu,elementIlosc,elementIdProduktu,elementZnizka);
+		      UPDATE towar SET Dostepnosc = Dostepnosc - elementIlosc
+		      WHERE id = elementIdProduktu;
+		      COMMIT;
+	       ELSE
+		      ROLLBACK;
+		      SIGNAL SQLSTATE
+		      '15000' SET MESSAGE_TEXT = 'Nie mozemy podac taka ilosc towarow';
+	           END IF;
+            ELSE 
+	           SIGNAL SQLSTATE
+	           '20000' SET MESSAGE_TEXT = 'Nie istnije takiego zamowienia, ktore posiada wybrane id!';
+            END IF;
+            END;
+            //
+            DELIMITER ;
+            </code></pre>
+            <section>
+            <h3>Simpla Java game on Android</h3>
+            <p>I created this game just a few days ago. Freindly speaking, code is not perfect, but I like how it works. Also it 
+                was the first time I programmed something for Android. I liked the creativity of this project. I have never thought before
+                about idea of game on smartphones and how to provide this proces. All in all, I got nice knowledge and hope to add here some more
+                intersting projects soon!</p>
+            </section>
+            <pre id="optionalstuffcode2"><code>
+            public void biggerNumber(View view) {
+                if(checkNumberOperations(moveNumber)) {
+                    if(randomNumber > compareNumber) {
+                    score += 10;
+                    moveNumber++;
+                    if(compareNumber &#60;65) {
+                        compareNumber = compareNumber + compareNumber/2;
+                    } else if (compareNumber &#60;90){
+                        compareNumber += 10;
+                    }
+                        Toast.makeText(this,"Nice intuition!",Toast.LENGTH_SHORT).show();
+                        askHint(compareNumber);
+                    } else if(randomNumber == compareNumber) {
+                        wonMessage();
+                    } else {
+                        score -= 10;
+                        Toast.makeText(this,"Incorrect! Use Smaller button",Toast.LENGTH_SHORT).show();
+                }
+                setBar(score);
+                }
+            }
+            public void setBar(int progress) {
+                simpleProgressBar = (ProgressBar)findViewById(R.id.progressBar);
+                simpleProgressBar.setProgress(progress);
+            }
+            public void wonMessage() {
+                TextView wonInfo = (TextView) findViewById(R.id.showNumber);
+                wonInfo.setText("You won! Well done!");
+                setBar(100);
+            }
+            </code></pre>
+            <section>
+            <h3>My own shell</h3>
+            <p>It was the task for one of main subjects. I didn`t think I will like doing such programs, specially in C. It was
+                exciting experience for me. I looked to many forums, trying to find answers to my questions. The hardest and funniest was to implement
+                possibility of scanning words with quotes and other symbols. I spent days trying to solve that task... On the down, ypu can see some example of code
+                of the function which is used for buffer and spliting line of symbols in a few words/commands.
+            </p>
+            </section>
+            <pre id="optionalstuffcode3"><code>
+            char** splitLine(char* line, char* delims){
+                int bufsize = BUFFER;
+                char* token;
+                char** tokens = malloc(sizeof(char*) * bufsize);
+                char** tokens_temp;
+                if(!tokens){
+                    exit(EXIT_FAILURE);
+                }
+            token = strtok(line, delims);
+            int pos = 0;
+            while(token != NULL){
+                tokens[pos] = token;
+                pos++;
+                if(pos >= bufsize){
+                tokens_temp = tokens;
+                bufsize += BUFFER;
+                tokens = realloc(tokens, sizeof(char*) * bufsize);
+                if(!tokens){
+                    free(tokens_temp);
+                    exit(EXIT_FAILURE);
+                }
+                }
+            token = strtok(NULL, delims);
+            }
+            // Add NULL at the end to signal last element
+            tokens[pos] = NULL;
+            return tokens;
+            } </code></pre>
+        </main>
+        </div>
+
+        <footer class="footer">
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="Правильний CSS!" />
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                 alt="Правильний CSS!" />
+            </a>
+        </footer>
+    </body>
+</html>
