@@ -78,9 +78,6 @@ main * {
   h3, h2, h1 {
     text-align: center; }
 
-  body {
-    background-image: url(background_studies.JPG); }
-
   aside {
     padding: 20px;
     background-color: darkslategrey;
