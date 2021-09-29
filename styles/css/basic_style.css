@@ -129,7 +129,7 @@ body {
 	.header {
 		padding: 5px;
 		text-align: center;
-		background: #f8f53d;
+		background: #3dbdf8;
 		font-size: 10px;
 		color: #fff;
 	}
@@ -144,7 +144,7 @@ body {
 		flex-direction: row;
 		width: 100%;
 		list-style-type: none;
-		background-color: #3d51f8;
+		background-color: #3a45aa;
 		text-align: center;
 		overflow: auto;
 		top: 0;
