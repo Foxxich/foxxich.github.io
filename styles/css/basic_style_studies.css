@@ -131,7 +131,7 @@ main * {
 	pre {
 		border: 3px;
 		border-style: solid;
-		border-color: red;
+		border-color: green;
 		padding: 1em;
 	}
 }
