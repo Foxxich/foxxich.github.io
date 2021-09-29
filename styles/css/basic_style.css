@@ -129,7 +129,7 @@ body {
 	.header {
 		padding: 10px;
 		text-align: center;
-		background: #3dc2f8;
+		background: #f83de9;
 		font-size: 10px;
 		color: #fff;
 	}
@@ -144,7 +144,7 @@ body {
 		flex-direction: row;
 		width: 100%;
 		list-style-type: none;
-		background-color: #3d51f8;
+		background-color: #f8d63d;
 		text-align: center;
 		overflow: auto;
 		top: 0;
@@ -176,7 +176,7 @@ body {
 	}
 
 	.navbar a:hover {
-		border-bottom: 3px solid blue;
+		border-bottom: 3px solid rgb(0, 255, 200);
 	}
 
 	body {
