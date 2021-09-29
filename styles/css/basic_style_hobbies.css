@@ -84,18 +84,19 @@
 }
 
 @media screen and (min-width: 813px) {
+
+	.column {
+		flex: 25%;
+		max-width: 50%;
+		padding: 4px;
+	}
+
 	article {
 		flex: 20%;
 		background-color: #6495ed;
 		padding: 20px;
 		color: #00008b;
 		opacity: .9;
-	}
-
-	.column {
-		flex: 25%;
-		max-width: 50%;
-		padding: 4px;
 	}
 
 	img {
