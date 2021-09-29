@@ -95,24 +95,23 @@ figcaption {
 }
 
 @media screen and (min-width: 813px) {
-	body;
-}
 
-article {
-	flex: 30%;
-	background-color: #d3d3d3;
-	padding: 20px;
-}
+    article {
+        flex: 30%;
+        background-color: #d3d3d3;
+        padding: 20px;
+    }
 
-main {
-	flex: 70%;
-	background-color: #f8f8ff;
-	padding: 20px;
-	opacity: 95%;
-}
+    main {
+        flex: 70%;
+        background-color: #f8f8ff;
+        padding: 20px;
+        opacity: 95%;
+    }
 
-img.me {
-	width: 100%;
-	padding: 20px;
-	border-radius: 20%;
-}}
+    img.me {
+        width: 100%;
+        padding: 20px;
+        border-radius: 20%;
+    }
+}
