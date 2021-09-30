@@ -55,10 +55,8 @@
 		background-color: #3d51f8;
 		text-align: center;
 		overflow: auto;
+		top: 0;
 		border: 1px solid #555;
-
-		position: fixed; /* Set the navbar to fixed position */
-  		top: 0; /* Position the navbar at the top of the page */
 	}
 
 	.menuBlock ul {
@@ -88,4 +86,4 @@
 	.menuBlock a:hover {
 		border-bottom: 3px solid blue;
 	}
-}
+}/*# sourceMappingURL=basic_script_style.css.map */
