@@ -133,5 +133,8 @@ main * {
 		border-style: solid;
 		border-color: green;
 		padding: 1em;
+		page-break-inside: avoid;
+		display: block;
+ 	 	word-wrap: break-word;
 	}
 }
