@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vadym Liss CV</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav class="navbar sticky-top navbar-expand-lg">
-        <a class="navbar-brand" href="#">CV Website</a>
+        <a class="navbar-brand" href="#">
+            <img src="graphics/logo.png" alt="Logo" style="max-height: 80px; max-width: 150px;" />
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,14 +40,12 @@
         </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container text-center">
-            <h1 class="display-4">Vadym Liss</h1>
-            <p class="lead">Developer</p>
-        </div>
+    <div data-aos="fade-in" class="container text-center">
+        <h1 class="display-4">Vadym Liss</h1>
+        <p class="lead">Developer</p>
     </div>
 
-    <div class="container">
+    <div data-aos="fade-in" class="container">
         <div id="about" class="card">
             <div class="card-header">
                 <h2 class="card-title">About</h2>
@@ -59,13 +60,13 @@
             </div>
         </div>
 
-        <div id="experience" class="card">
+        <div data-aos="fade-in" id="experience" class="card">
             <div class="card-header">
                 <h2 class="card-title">Experience</h2>
             </div>
             <div class="card-body">
                 <h4 class="card-title">Android developer - Emognition</h4>
-                <h5 class="card-subtitle">2022 - 2023</h5>
+                <h5 class="card-subtitle"><b>2022 - 2023</b></h5>
                 <p class="card-text">I am working as a software developer in the Emognition team. Also I am responsible
                     for various parts of the Emognition software stack, focusing primarily on Android application,
                     Python scripts and technical support.
@@ -73,25 +74,25 @@
             </div>
         </div>
 
-        <div id="education" class="card">
+        <div data-aos="fade-in" id="education" class="card">
             <div class="card-header">
                 <h2 class="card-title">Education</h2>
             </div>
             <div class="card-body">
                 <h4 class="card-title">Bachelor of Algorithmic Computer Science - Wrocław University of Science and
                     Technology</h4>
-                <h5 class="card-subtitle">2019 - 2023</h5>
+                <h5 class="card-subtitle"><b>2019 - 2023</b></h5>
                 <p class="card-text"></p>
             </div>
             <div class="card-body">
                 <h4 class="card-title">Master of Applied Computer Science - Wrocław University of Science and Technology
                 </h4>
-                <h5 class="card-subtitle">2023 - 2024</h5>
+                <h5 class="card-subtitle"><b>2023 - 2024</b></h5>
                 <p class="card-text"></p>
             </div>
         </div>
 
-        <div id="skills" class="card">
+        <div data-aos="fade-in" id="skills" class="card">
             <div class="card-header">
                 <h2 class="card-title">Skills</h2>
             </div>
@@ -122,6 +123,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
