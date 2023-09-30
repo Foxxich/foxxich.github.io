@@ -16,6 +16,30 @@ body {
   padding: 0;
 }
 
+.links-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 0rem;
+  }
+
+  nav {
+    height: 3rem;
+    position: sticky;
+    top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 7rem;
+  }
+}
+
 p,
 h1,
 h3,
