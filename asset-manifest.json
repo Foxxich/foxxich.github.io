@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.73539292.css",
-    "main.js": "/react-gh-pages/static/js/main.2c9c8419.js",
-    "static/js/592.e0183604.chunk.js": "/react-gh-pages/static/js/592.e0183604.chunk.js",
-    "index.html": "/react-gh-pages/index.html",
-    "main.73539292.css.map": "/react-gh-pages/static/css/main.73539292.css.map",
-    "main.2c9c8419.js.map": "/react-gh-pages/static/js/main.2c9c8419.js.map",
-    "592.e0183604.chunk.js.map": "/react-gh-pages/static/js/592.e0183604.chunk.js.map"
+    "main.css": "/Foxxich/foxxich.github.io/static/css/main.73539292.css",
+    "main.js": "/Foxxich/foxxich.github.io/static/js/main.1118867c.js",
+    "static/js/592.e0183604.chunk.js": "/Foxxich/foxxich.github.io/static/js/592.e0183604.chunk.js",
+    "index.html": "/Foxxich/foxxich.github.io/index.html",
+    "main.73539292.css.map": "/Foxxich/foxxich.github.io/static/css/main.73539292.css.map",
+    "main.1118867c.js.map": "/Foxxich/foxxich.github.io/static/js/main.1118867c.js.map",
+    "592.e0183604.chunk.js.map": "/Foxxich/foxxich.github.io/static/js/592.e0183604.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73539292.css",
-    "static/js/main.2c9c8419.js"
+    "static/js/main.1118867c.js"
   ]
 }
