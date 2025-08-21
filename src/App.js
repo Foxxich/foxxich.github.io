@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Nav, Navbar, Card, Button } from "react-bootstrap";
+import { Container, Nav, Navbar, Card } from "react-bootstrap";
 
 function App() {
   return (
     <div className="App">
-      <Navbar bg="light" expand="lg" id="navbar_top">
+      <Navbar expand="lg" id="navbar_top">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -23,6 +23,8 @@ function App() {
               <Nav.Link href="#experience">Experience</Nav.Link>
               <Nav.Link href="#education">Education</Nav.Link>
               <Nav.Link href="#skills">Skills</Nav.Link>
+              <Nav.Link href="#languages">Languages</Nav.Link>
+              <Nav.Link href="#certificates">Certificates</Nav.Link>
               <Nav.Link href="#links">Useful links</Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -30,7 +32,12 @@ function App() {
       </Navbar>
       <Container className="text-center" data-aos="fade-in">
         <h1 className="display-4">Vadym Liss</h1>
-        <p className="lead">Software Developer</p>
+        <p className="lead">Master Engineer and Full-Stack Developer</p>
+        <p className="contact-info">
+          <span className="email">moc.liamg@77ssilmidav</span> | 
+          <span className="phone">+48884001830</span> | 
+          Dusseldorf
+        </p>
       </Container>
       <Container data-aos="fade-in">
         <Card className="mb-3" id="about">
@@ -39,135 +46,123 @@ function App() {
           </Card.Header>
           <Card.Body>
             <Card.Text>
-              I'm a dedicated software developer with a passion for crafting
-              exceptional Android, Python, and NodeJS applications. I've played
-              a pivotal role in shaping of software stack, focusing primarily on
-              Android development. My strengths lie in effective communication,
-              collaborative teamwork, and meticulous technical documentation.
+              I am a 24-year-old Master Engineer and full-stack developer with 3.5 years commercial and 6 years non-commercial experience.
             </Card.Text>
           </Card.Body>
         </Card>
-
         <Card className="mb-3" id="experience">
           <Card.Header>
             <h2>Experience</h2>
           </Card.Header>
           <Card.Body>
-            <h4 className="card-title">Software Developer - Emognition</h4>
-            <h5 className="card-subtitle">
-              <b>April, 2022 - Present</b>
-            </h5>
-            <p className="card-text">
-              <b>Android Application Development:</b>
-            </p>
-            <ul>
-              <li>
-                Implemented and refactored Kotlin code to enhance functionality
-                and user experience.
-              </li>
-              <li>
-                Developed and executed comprehensive JUnit tests to ensure the
-                robustness.
-              </li>
-              <li>
-                Conducted thorough Android application testing to identify and
-                rectify issues.
-              </li>
+            <h4 className="card-title">Junior DevOps - ISS</h4>
+            <h5 className="card-subtitle"><b>Dusseldorf | Feb 2024 - Present</b></h5>
+            <ul className="rounded-list">
+              <li>Experienced in Java development, working with APIs to enhance file transfer functionality, integrate third-party services, and automate workflows using Groovy.</li>
+              <li>Skilled in Document Management Systems (DMS), particularly Doxis, where I developed scripts for agents and the web version to enable custom operations, preprocessing over 1,000 files in tailored workflows.</li>
+              <li>Proficient in Jira for project coordination and Excel for data-driven reporting.</li>
+              <li>As a DevOps engineer, implemented OCR solutions in Python with EasyOCR and Pytesseract, successfully preprocessing more than 60,000 images.</li>
+              <li>Deployed containerized projects on Azure for machine learning, analyzed data for model definition and preprocessing, and developed RESTful APIs with multi-protocol support and monitoring tools.</li>
+              <li>Experienced with VPN and communication protocols to ensure solution stability across systems.</li>
+              <li>Additionally, leveraged Power Automate and Power Apps to improve customer response and process efficiency.</li>
             </ul>
-            <p className="card-text">
-              <b>Documentation:</b>
-            </p>
-            <ul>
-              <li>
-                Successfully completed documentation for multiple projects,
-                ensuring clear and accessiblereference materials for the team.
-              </li>
+            <hr />
+            <h4 className="card-title">Information Technologies Tutor - Freelance</h4>
+            <h5 className="card-subtitle"><b>Wrocław | Sep 2023 - Present</b></h5>
+            <ul className="rounded-list">
+              <li>Experienced in C++, C, and Java programming, including mentoring and explaining concepts to students.</li>
+              <li>Additionally responsible for creating websites, REST APIs, and Android applications to demonstrate and explore new technologies with clients.</li>
             </ul>
-            <p className="card-text">
-              <b>API Development:</b>
-            </p>
-            <ul>
-              <li>
-                Implemented RESTful APIs to enable efficient data exchange and
-                communication betweendifferent software components.
-              </li>
-            </ul>
-            <p className="card-text">
-              <b>Node.js and Python Scripting:</b>
-            </p>
-            <ul>
-              <li>
-                Collaborated in extending the functionality of Node.js and
-                Python scripts.
-              </li>
-              <li>
-                Demonstrated proficiency in web scraping using Python,
-                extracting valuable data fromweb sources.
-              </li>
+            <hr />
+            <h4 className="card-title">Junior Android Developer - Emognition</h4>
+            <h5 className="card-subtitle"><b>Wrocław | Feb 2022 - Oct 2022</b></h5>
+            <ul className="rounded-list">
+              <li>Implemented and refactored Kotlin code with Firebase and RxJava, developed JUnit tests, and built UI functionalities with Cucumber while testing the Emognition Android app for physical signal examination, serving 100+ active testers and users.</li>
+              <li>Additionally, developed secure RESTful APIs to protect user-generated data, extended Node.js/Python scripts for data scraping, and optimized SQL/NoSQL databases for analysis and performance.</li>
+              <li>Collaborated via Git/GitHub, applied Agile practices, and created responsive React.js front-ends.</li>
             </ul>
           </Card.Body>
         </Card>
-
         <Card className="mb-3" id="education">
           <Card.Header>
             <h2>Education</h2>
           </Card.Header>
           <Card.Body>
-            <h4 className="card-title">
-              Engineer of Algorithmic Computer Science (Software Engineering) -
-              Wrocław University of Science and Technology
-            </h4>
-            <h5 className="card-subtitle">
-              <b>2019 - 2023</b>
-            </h5>
-            <p className="card-text" />
+            <h4 className="card-title">Master Engineer Applied Computer Science - Politechnika Wrocławska</h4>
+            <h5 className="card-subtitle"><b>Mar 2023 - Jul 2025</b></h5>
+            <p className="card-text">GPA: 5.0 (Bardzo dobry)</p>
           </Card.Body>
           <Card.Body>
-            <h4 className="card-title">
-              Master of Applied Computer Science (Software Engineering) -
-              Wrocław University of Science and Technology
-            </h4>
-            <h5 className="card-subtitle">
-              <b>2023 - 2024</b>
-            </h5>
-            <p className="card-text" />
+            <h4 className="card-title">Engineer Algorithmic Computer Science - Politechnika Wrocławska</h4>
+            <h5 className="card-subtitle"><b>Oct 2019 - Jan 2023</b></h5>
+            <p className="card-text">GPA: 4.5 (Dobry plus)</p>
           </Card.Body>
         </Card>
-
         <Card className="mb-3" id="skills">
           <Card.Header>
             <h2>Skills</h2>
           </Card.Header>
           <Card.Body>
             <div className="skills-container">
+              <div className="skill">DevOps</div>
               <div className="skill">Java</div>
-              <div className="skill">Kotlin</div>
-              <div className="skill">Dagger</div>
-              <div className="skill">Python</div>
-              <div className="skill">Compose</div>
-              <div className="skill">REST API</div>
-              <div className="skill">SQL</div>
-              <div className="skill">Git</div>
-              <div className="skill">Node.js</div>
               <div className="skill">Android</div>
-              <div className="skill">HTML</div>
-              <div className="skill">CSS</div>
-              <div className="skill">Hilt</div>
-              <div className="skill">Docker</div>
-              <div className="skill">Firebase</div>
-              <div className="skill">Glide</div>
-              <div className="skill">RxJava2</div>
-              <div className="skill">Django</div>
-              <div className="skill">Cucumber</div>
-              <div className="skill">Espresso</div>
-              <div className="skill">Linux</div>
-              <div className="skill">Bash</div>
+              <div className="skill">Python</div>
+              <div className="skill">DMS</div>
+              <div className="skill">Communication</div>
+              <div className="skill">Problem-Solving</div>
+              <div className="skill">Teamwork</div>
+              <div className="skill">Groovy</div>
+              <div className="skill">Doxis</div>
               <div className="skill">Jira</div>
-              <div className="skill">Threads</div>
+              <div className="skill">Excel</div>
+              <div className="skill">OCR</div>
+              <div className="skill">EasyOCR</div>
+              <div className="skill">Pytesseract</div>
+              <div className="skill">Azure</div>
+              <div className="skill">RESTful APIs</div>
+              <div className="skill">VPN</div>
+              <div className="skill">Power Automate</div>
+              <div className="skill">Power Apps</div>
+              <div className="skill">C++</div>
+              <div className="skill">C</div>
+              <div className="skill">Kotlin</div>
+              <div className="skill">Firebase</div>
+              <div className="skill">RxJava</div>
+              <div className="skill">JUnit</div>
+              <div className="skill">Cucumber</div>
+              <div className="skill">Node.js</div>
+              <div className="skill">SQL</div>
+              <div className="skill">NoSQL</div>
+              <div className="skill">Git/GitHub</div>
+              <div className="skill">Agile</div>
+              <div className="skill">React.js</div>
             </div>
           </Card.Body>
         </Card>
-
+        <Card className="mb-3" id="languages">
+          <Card.Header>
+            <h2>Languages</h2>
+          </Card.Header>
+          <Card.Body>
+            <ul className="rounded-list">
+              <li>Polish (C1)</li>
+              <li>English (B2)</li>
+              <li>Ukrainian (C2)</li>
+              <li>Russian (C2)</li>
+              <li>German (A1)</li>
+            </ul>
+          </Card.Body>
+        </Card>
+        <Card className="mb-3" id="certificates">
+          <Card.Header>
+            <h2>Certificates</h2>
+          </Card.Header>
+          <Card.Body>
+            <h4 className="card-title">Technical Support Fundamentals - Coursera</h4>
+            <h5 className="card-subtitle"><b>Jul 2021</b></h5>
+          </Card.Body>
+        </Card>
         <Card className="mb-3" id="links">
           <Card.Header>
             <h2>Useful links</h2>
@@ -176,7 +171,7 @@ function App() {
             <p className="card-text"></p>
             <div className="d-flex bd-highlight">
               <div className="p-2 flex-fill bd-highlight links-icon">
-                <a href="https://pl.linkedin.com/in/vadym-liss-a63657216">
+                <a href="https://www.linkedin.com/in/vadym-liss/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={16}
@@ -222,8 +217,6 @@ function App() {
             <p />
           </Card.Body>
         </Card>
-
-        {/* Repeat for Experience, Education, Skills, and Useful links sections with appropriate Card components */}
       </Container>
     </div>
   );

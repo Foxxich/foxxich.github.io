@@ -1,72 +1,50 @@
+/* Define global variables with fallbacks */
 :root {
-  --dark-blue: #4682a9;
-  --bright-blue: #749bc2;
-  --white: #ffffff;
+  --color-dark: #1a1a1a;        /* Neutral near-black for main text */
+  --color-primary: #2ecc71;     /* Fresh emerald green for highlights */
+  --color-white: #ffffff;
+  --color-background: #f5f9f6;  /* Soft green-tinted background */
+  --color-surface: #f5e6d3;     /* Warm beige for cards/surfaces */
+  --color-subtext: #7a7a7a;     /* Muted gray for subtitles */
 }
 
-.nav-item {
-  text-decoration: underline;
-  color: var(--white);
-}
-
+/* Base styles with new background */
 body {
   font-family: Courier, monospace;
-  background-color: #f6f4eb;
+  background-color: var(--color-background) !important;
   margin: 0;
   padding: 0;
+  color: var(--color-dark);
 }
 
-.links-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-p,
-h1,
-h3,
-h4,
-h5,
-h6,
-li,
-a {
-  color: var(--dark-blue);
-}
-
-h2 {
-  color: var(--white);
-}
-
-.navbar {
-  background-color: var(--bright-blue);
+/* Navbar styles with green background */
+.navbar#navbar_top {
+  background-color: var(--color-primary) !important;
 }
 
 .navbar-brand {
-  color: var(--white);
+  color: var(--color-white) !important;
   font-size: 1.5rem;
 }
 
 .navbar-nav .nav-link {
-  color: var(--white);
+  color: var(--color-white) !important;
+  text-decoration: underline;
 }
 
 .navbar-toggler {
-  border-color: var(--white);
-  background-color: gray;
-  background-image: none;
+  border-color: var(--color-white) !important;
+  background-color: var(--color-primary) !important;
 }
 
 .navbar-toggler-icon {
-  background-color: var(--bright-blue);
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0' y1='5' x2='30' y2='5' stroke='white' stroke-width='2'%3E%3C/line%3E%3Cline x1='0' y1='14' x2='30' y2='14' stroke='white' stroke-width='2'%3E%3C/line%3E%3Cline x1='0' y1='23' x2='30' y2='23' stroke='white' stroke-width='2'%3E%3C/line%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0' y1='5' x2='30' y2='5' stroke='%23ffffff' stroke-width='2'%3E%3C/line%3E%3Cline x1='0' y1='14' x2='30' y2='14' stroke='%23ffffff' stroke-width='2'%3E%3C/line%3E%3Cline x1='0' y1='23' x2='30' y2='23' stroke='%23ffffff' stroke-width='2'%3E%3C/line%3E%3C/svg%3E");
 }
 
-.navbar-toggler {
-  background-color: var(--bright-blue);
-}
-
+/* Card styles with custom background */
 .card {
   margin-bottom: 20px;
+  background-color: var(--color-surface) !important;
 }
 
 @media (min-width: 768px) {
@@ -76,42 +54,82 @@ h2 {
 }
 
 .card-header {
-  background-color: var(--bright-blue);
-  color: var(--white);
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
 }
 
 .card-body {
   padding: 20px;
+  background-color: var(--color-surface) !important;
+}
+
+/* Text styles */
+.display-4 {
+  font-size: 2.5rem;
+  color: var(--color-white) !important;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--color-white) !important;
 }
 
 .card-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: var(--color-white) !important;
+}
+
+.card-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-subtext) !important;
 }
 
 .card-text {
   font-size: 1.1rem;
+  color: var(--color-white) !important;
 }
 
-@media (max-width: 767px) {
-  .navbar-nav {
-    flex-direction: column;
-  }
+/* Contact info styles */
+.contact-info {
+  font-size: 1rem;
+  color: var(--color-white) !important;
 }
 
+.contact-info .email {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  color: var(--color-white) !important;
+}
+
+.contact-info .phone {
+  letter-spacing: -0.1em;
+  color: var(--color-white) !important;
+}
+
+.contact-info span:nth-child(3) {
+  display: inline-block;
+  transform: rotate(180deg);
+  color: var(--color-white) !important;
+}
+
+/* Rounded list styles */
 .rounded-list {
   border-radius: 10px;
   padding: 10px;
-  background-color: var(--white);
+  background-color: var(--color-surface) !important;
+  list-style-type: none;
 }
 
 .rounded-list li {
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 5px;
-  background-color: var(--white);
+  color: var(--color-white) !important;
 }
 
+/* Skills section styles */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -121,8 +139,8 @@ h2 {
 }
 
 .skill {
-  background-color: var(--dark-blue);
-  color: var(--white);
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
   border-radius: 20px;
   padding: 10px 20px;
   margin: 5px;
@@ -133,5 +151,43 @@ h2 {
 @media (max-width: 768px) {
   .skill {
     min-width: 100px;
+  }
+}
+
+/* Links section styles */
+.d-flex.bd-highlight {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links-icon a {
+  color: var(--color-white) !important;
+}
+
+/* Diagnostic test style */
+.display-4::after {
+  content: " (CSS Loaded)";
+  color: var(--color-primary);
+}
+
+/* General text styles */
+p, h1, h3, h4, h5, h6, li, a {
+  color: var(--color-white) !important;
+}
+
+h2 {
+  color: var(--color-white) !important;
+}
+
+/* Responsive navbar */
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column;
   }
 }
