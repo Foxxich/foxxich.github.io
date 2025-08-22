@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Foxxich/foxxich.github.io/static/css/main.6c1f8464.css",
-    "main.js": "/Foxxich/foxxich.github.io/static/js/main.5bced70f.js",
-    "static/js/592.e0183604.chunk.js": "/Foxxich/foxxich.github.io/static/js/592.e0183604.chunk.js",
-    "static/media/fox-removebg-preview.png": "/Foxxich/foxxich.github.io/static/media/fox-removebg-preview.843abbc4378ae70837d6.png",
-    "index.html": "/Foxxich/foxxich.github.io/index.html",
-    "main.6c1f8464.css.map": "/Foxxich/foxxich.github.io/static/css/main.6c1f8464.css.map",
-    "main.5bced70f.js.map": "/Foxxich/foxxich.github.io/static/js/main.5bced70f.js.map",
-    "592.e0183604.chunk.js.map": "/Foxxich/foxxich.github.io/static/js/592.e0183604.chunk.js.map"
+    "main.css": "/Foxxich/static/css/main.6c1f8464.css",
+    "main.js": "/Foxxich/static/js/main.0f45cdd0.js",
+    "static/js/592.e0183604.chunk.js": "/Foxxich/static/js/592.e0183604.chunk.js",
+    "static/media/fox-removebg-preview.png": "/Foxxich/static/media/fox-removebg-preview.843abbc4378ae70837d6.png",
+    "index.html": "/Foxxich/index.html",
+    "main.6c1f8464.css.map": "/Foxxich/static/css/main.6c1f8464.css.map",
+    "main.0f45cdd0.js.map": "/Foxxich/static/js/main.0f45cdd0.js.map",
+    "592.e0183604.chunk.js.map": "/Foxxich/static/js/592.e0183604.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6c1f8464.css",
-    "static/js/main.5bced70f.js"
+    "static/js/main.0f45cdd0.js"
   ]
 }
