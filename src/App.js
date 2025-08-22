@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Nav, Navbar, Card } from "react-bootstrap";
+import logo from "./assets/fox-removebg-preview.png";
 
 function App() {
   return (
@@ -10,11 +11,12 @@ function App() {
         <Container>
           <Navbar.Brand href="#home">
             <img
-              src="../public/logo.png"
+              src={logo}
               alt="Logo"
               style={{ maxHeight: 80, maxWidth: 150 }}
             />
           </Navbar.Brand>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
@@ -34,9 +36,8 @@ function App() {
         <h1 className="display-4">Vadym Liss</h1>
         <p className="lead">Master Engineer and Full-Stack Developer</p>
         <p className="contact-info">
-          <span className="email">moc.liamg@77ssilmidav</span> | 
-          <span className="phone">+48884001830</span> | 
-          Dusseldorf
+          <span className="email">vadimliss77 at gmail.com</span> |
+          <span className="phone">+48884001830</span> | Dusseldorf
         </p>
       </Container>
       <Container data-aos="fade-in">
@@ -46,7 +47,8 @@ function App() {
           </Card.Header>
           <Card.Body>
             <Card.Text>
-              I am a 24-year-old Master Engineer and full-stack developer with 3.5 years commercial and 6 years non-commercial experience.
+              I am a 24-year-old Master Engineer and full-stack developer with
+              3.5 years commercial and 6 years non-commercial experience.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -56,30 +58,87 @@ function App() {
           </Card.Header>
           <Card.Body>
             <h4 className="card-title">Junior DevOps - ISS</h4>
-            <h5 className="card-subtitle"><b>Dusseldorf | Feb 2024 - Present</b></h5>
+            <h5 className="card-subtitle">
+              <b>Dusseldorf | Feb 2024 - Present</b>
+            </h5>
             <ul className="rounded-list">
-              <li>Experienced in Java development, working with APIs to enhance file transfer functionality, integrate third-party services, and automate workflows using Groovy.</li>
-              <li>Skilled in Document Management Systems (DMS), particularly Doxis, where I developed scripts for agents and the web version to enable custom operations, preprocessing over 1,000 files in tailored workflows.</li>
-              <li>Proficient in Jira for project coordination and Excel for data-driven reporting.</li>
-              <li>As a DevOps engineer, implemented OCR solutions in Python with EasyOCR and Pytesseract, successfully preprocessing more than 60,000 images.</li>
-              <li>Deployed containerized projects on Azure for machine learning, analyzed data for model definition and preprocessing, and developed RESTful APIs with multi-protocol support and monitoring tools.</li>
-              <li>Experienced with VPN and communication protocols to ensure solution stability across systems.</li>
-              <li>Additionally, leveraged Power Automate and Power Apps to improve customer response and process efficiency.</li>
+              <li>
+                Experienced in Java development, working with APIs to enhance
+                file transfer functionality, integrate third-party services, and
+                automate workflows using Groovy.
+              </li>
+              <li>
+                Skilled in Document Management Systems (DMS), particularly
+                Doxis, where I developed scripts for agents and the web version
+                to enable custom operations, preprocessing over 1,000 files in
+                tailored workflows.
+              </li>
+              <li>
+                Proficient in Jira for project coordination and Excel for
+                data-driven reporting.
+              </li>
+              <li>
+                As a DevOps engineer, implemented OCR solutions in Python with
+                EasyOCR and Pytesseract, successfully preprocessing more than
+                60,000 images.
+              </li>
+              <li>
+                Deployed containerized projects on Azure for machine learning,
+                analyzed data for model definition and preprocessing, and
+                developed RESTful APIs with multi-protocol support and
+                monitoring tools.
+              </li>
+              <li>
+                Experienced with VPN and communication protocols to ensure
+                solution stability across systems.
+              </li>
+              <li>
+                Additionally, leveraged Power Automate and Power Apps to improve
+                customer response and process efficiency.
+              </li>
             </ul>
             <hr />
-            <h4 className="card-title">Information Technologies Tutor - Freelance</h4>
-            <h5 className="card-subtitle"><b>Wrocław | Sep 2023 - Present</b></h5>
+            <h4 className="card-title">
+              Information Technologies Tutor - Freelance
+            </h4>
+            <h5 className="card-subtitle">
+              <b>Wrocław | Sep 2023 - Present</b>
+            </h5>
             <ul className="rounded-list">
-              <li>Experienced in C++, C, and Java programming, including mentoring and explaining concepts to students.</li>
-              <li>Additionally responsible for creating websites, REST APIs, and Android applications to demonstrate and explore new technologies with clients.</li>
+              <li>
+                Experienced in C++, C, and Java programming, including mentoring
+                and explaining concepts to students.
+              </li>
+              <li>
+                Additionally responsible for creating websites, REST APIs, and
+                Android applications to demonstrate and explore new technologies
+                with clients.
+              </li>
             </ul>
             <hr />
-            <h4 className="card-title">Junior Android Developer - Emognition</h4>
-            <h5 className="card-subtitle"><b>Wrocław | Feb 2022 - Oct 2022</b></h5>
+            <h4 className="card-title">
+              Junior Android Developer - Emognition
+            </h4>
+            <h5 className="card-subtitle">
+              <b>Wrocław | Feb 2022 - Oct 2022</b>
+            </h5>
             <ul className="rounded-list">
-              <li>Implemented and refactored Kotlin code with Firebase and RxJava, developed JUnit tests, and built UI functionalities with Cucumber while testing the Emognition Android app for physical signal examination, serving 100+ active testers and users.</li>
-              <li>Additionally, developed secure RESTful APIs to protect user-generated data, extended Node.js/Python scripts for data scraping, and optimized SQL/NoSQL databases for analysis and performance.</li>
-              <li>Collaborated via Git/GitHub, applied Agile practices, and created responsive React.js front-ends.</li>
+              <li>
+                Implemented and refactored Kotlin code with Firebase and RxJava,
+                developed JUnit tests, and built UI functionalities with
+                Cucumber while testing the Emognition Android app for physical
+                signal examination, serving 100+ active testers and users.
+              </li>
+              <li>
+                Additionally, developed secure RESTful APIs to protect
+                user-generated data, extended Node.js/Python scripts for data
+                scraping, and optimized SQL/NoSQL databases for analysis and
+                performance.
+              </li>
+              <li>
+                Collaborated via Git/GitHub, applied Agile practices, and
+                created responsive React.js front-ends.
+              </li>
             </ul>
           </Card.Body>
         </Card>
@@ -88,13 +147,21 @@ function App() {
             <h2>Education</h2>
           </Card.Header>
           <Card.Body>
-            <h4 className="card-title">Master Engineer Applied Computer Science - Politechnika Wrocławska</h4>
-            <h5 className="card-subtitle"><b>Mar 2023 - Jul 2025</b></h5>
+            <h4 className="card-title">
+              Master Engineer Applied Computer Science - Politechnika Wrocławska
+            </h4>
+            <h5 className="card-subtitle">
+              <b>Mar 2023 - Jul 2025</b>
+            </h5>
             <p className="card-text">GPA: 5.0 (Bardzo dobry)</p>
           </Card.Body>
           <Card.Body>
-            <h4 className="card-title">Engineer Algorithmic Computer Science - Politechnika Wrocławska</h4>
-            <h5 className="card-subtitle"><b>Oct 2019 - Jan 2023</b></h5>
+            <h4 className="card-title">
+              Engineer Algorithmic Computer Science - Politechnika Wrocławska
+            </h4>
+            <h5 className="card-subtitle">
+              <b>Oct 2019 - Jan 2023</b>
+            </h5>
             <p className="card-text">GPA: 4.5 (Dobry plus)</p>
           </Card.Body>
         </Card>
@@ -159,8 +226,12 @@ function App() {
             <h2>Certificates</h2>
           </Card.Header>
           <Card.Body>
-            <h4 className="card-title">Technical Support Fundamentals - Coursera</h4>
-            <h5 className="card-subtitle"><b>Jul 2021</b></h5>
+            <h4 className="card-title">
+              Technical Support Fundamentals - Coursera
+            </h4>
+            <h5 className="card-subtitle">
+              <b>Jul 2021</b>
+            </h5>
           </Card.Body>
         </Card>
         <Card className="mb-3" id="links">
@@ -195,21 +266,6 @@ function App() {
                     viewBox="0 0 16 16"
                   >
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                  </svg>
-                </a>
-              </div>
-              <div className="p-2 flex-fill bd-highlight links-icon">
-                <a href="https://github.com/Foxxich/foxxich.github.io/blob/main/files/cv.pdf">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={16}
-                    height={16}
-                    fill="currentColor"
-                    className="bi bi-file-person"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
-                    <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                   </svg>
                 </a>
               </div>

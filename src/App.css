@@ -1,14 +1,14 @@
 /* Define global variables with fallbacks */
 :root {
-  --color-dark: #1a1a1a;        /* Neutral near-black for main text */
-  --color-primary: #2ecc71;     /* Fresh emerald green for highlights */
+  --color-dark: #000000;        /* Black for all text */
+  --color-primary: #556b2f;     /* Dark olive green (navbar, highlights) */
   --color-white: #ffffff;
-  --color-background: #f5f9f6;  /* Soft green-tinted background */
-  --color-surface: #f5e6d3;     /* Warm beige for cards/surfaces */
-  --color-subtext: #7a7a7a;     /* Muted gray for subtitles */
+  --color-background: #f5f5f5;  /* Light background */
+  --color-surface: #eae7dc;     /* Light beige for cards/surfaces */
+  --color-subtext: #444444;     /* Dark gray for subtitles */
 }
 
-/* Base styles with new background */
+/* Base styles */
 body {
   font-family: Courier, monospace;
   background-color: var(--color-background) !important;
@@ -17,7 +17,7 @@ body {
   color: var(--color-dark);
 }
 
-/* Navbar styles with green background */
+/* Navbar */
 .navbar#navbar_top {
   background-color: var(--color-primary) !important;
 }
@@ -41,7 +41,7 @@ body {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0' y1='5' x2='30' y2='5' stroke='%23ffffff' stroke-width='2'%3E%3C/line%3E%3Cline x1='0' y1='14' x2='30' y2='14' stroke='%23ffffff' stroke-width='2'%3E%3C/line%3E%3Cline x1='0' y1='23' x2='30' y2='23' stroke='%23ffffff' stroke-width='2'%3E%3C/line%3E%3C/svg%3E");
 }
 
-/* Card styles with custom background */
+/* Card */
 .card {
   margin-bottom: 20px;
   background-color: var(--color-surface) !important;
@@ -66,19 +66,19 @@ body {
 /* Text styles */
 .display-4 {
   font-size: 2.5rem;
-  color: var(--color-white) !important;
+  color: var(--color-dark) !important;
 }
 
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
-  color: var(--color-white) !important;
+  color: var(--color-dark) !important;
 }
 
 .card-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: var(--color-white) !important;
+  color: var(--color-dark) !important;
 }
 
 .card-subtitle {
@@ -88,48 +88,48 @@ body {
 
 .card-text {
   font-size: 1.1rem;
-  color: var(--color-white) !important;
+  color: var(--color-dark) !important;
 }
 
-/* Contact info styles */
+/* Contact info */
 .contact-info {
   font-size: 1rem;
-  color: var(--color-white) !important;
+  color: var(--color-dark) !important;
 }
 
-.contact-info .email {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  color: var(--color-white) !important;
-}
-
-.contact-info .phone {
-  letter-spacing: -0.1em;
-  color: var(--color-white) !important;
-}
-
+.contact-info .email,
+.contact-info .phone,
 .contact-info span:nth-child(3) {
-  display: inline-block;
-  transform: rotate(180deg);
-  color: var(--color-white) !important;
+  color: var(--color-dark) !important;
 }
 
-/* Rounded list styles */
+/* Rounded list */
 .rounded-list {
   border-radius: 10px;
   padding: 10px;
   background-color: var(--color-surface) !important;
-  list-style-type: none;
+  list-style-type: disc; /* restore bullet dots */
+  list-style-position: inside; /* keep bullets aligned inside */
+  color: var(--color-dark) !important; /* black text */
 }
 
 .rounded-list li {
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 5px;
-  color: var(--color-white) !important;
+  color: var(--color-dark) !important; /* black text */
 }
 
-/* Skills section styles */
+ul, ol {
+  color: var(--color-dark) !important;   /* makes text black */
+}
+
+ul li::marker, 
+ol li::marker {
+  color: #000000 !important; /* makes the bullet/dot black */
+}
+
+/* Skills */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -154,7 +154,7 @@ body {
   }
 }
 
-/* Links section styles */
+/* Links */
 .d-flex.bd-highlight {
   display: flex;
   justify-content: space-between;
@@ -167,22 +167,17 @@ body {
 }
 
 .links-icon a {
-  color: var(--color-white) !important;
+  color: var(--color-dark) !important;
 }
 
-/* Diagnostic test style */
+/* Diagnostic */
 .display-4::after {
-  content: " (CSS Loaded)";
   color: var(--color-primary);
 }
 
-/* General text styles */
-p, h1, h3, h4, h5, h6, li, a {
-  color: var(--color-white) !important;
-}
-
-h2 {
-  color: var(--color-white) !important;
+/* General text */
+p, h1, h2, h3, h4, h5, h6, li, a {
+  color: var(--color-dark) !important;
 }
 
 /* Responsive navbar */
