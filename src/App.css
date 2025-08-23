@@ -8,16 +8,28 @@
   --color-subtext: #444444;     /* Dark gray for subtitles */
 }
 
+html {
+  scroll-padding-top: 100px; /* adjust to your navbar height */
+}
+
 /* Base styles */
 body {
   font-family: Courier, monospace;
   background-color: var(--color-background) !important;
   margin: 0;
-  padding: 0;
+  padding-top: 160px;
   color: var(--color-dark);
 }
 
 /* Navbar */
+/* Navbar height */
+.navbar {
+  height: 80px; /* adjust as you like */
+  display: flex;
+  align-items: center; /* vertically center logo and links */
+  padding: 0 20px; /* horizontal spacing */
+}
+
 .navbar#navbar_top {
   background-color: var(--color-primary) !important;
 }

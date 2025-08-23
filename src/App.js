@@ -7,7 +7,7 @@ import logo from "./assets/fox-removebg-preview.png";
 function App() {
   return (
     <div className="App">
-      <Navbar expand="lg" id="navbar_top">
+      <Navbar expand="lg" id="navbar_top" fixed="top">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -47,8 +47,15 @@ function App() {
           </Card.Header>
           <Card.Body>
             <Card.Text>
-              I am a 24-year-old Master Engineer and full-stack developer with
-              3.5 years commercial and 6 years non-commercial experience.
+              I’m a dedicated full-stack software developer with a passion for building
+              robust and user-focused applications. With 3.5 years of commercial and
+              6 years of non-commercial experience, I have played a key role in shaping
+              software solutions across diverse domains. My expertise spans DevOps,
+              Java, Android, Python, and Document Management Systems (DMS), where I
+              focus on creating scalable and efficient systems. My strengths include
+              effective communication, problem-solving, and collaborative teamwork,
+              which enable me to contribute meaningfully to projects and drive
+              successful outcomes.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -63,37 +70,37 @@ function App() {
             </h5>
             <ul className="rounded-list">
               <li>
-                Experienced in Java development, working with APIs to enhance
+                I am experienced in Java development, working with APIs to enhance
                 file transfer functionality, integrate third-party services, and
                 automate workflows using Groovy.
               </li>
               <li>
-                Skilled in Document Management Systems (DMS), particularly
+                I am skilled in DMS with Doxis, particularly
                 Doxis, where I developed scripts for agents and the web version
                 to enable custom operations, preprocessing over 1,000 files in
                 tailored workflows.
               </li>
               <li>
-                Proficient in Jira for project coordination and Excel for
+                I am proficient in Jira for project coordination and Excel for
                 data-driven reporting.
               </li>
               <li>
-                As a DevOps engineer, implemented OCR solutions in Python with
+                I implemented OCR solutions in Python with
                 EasyOCR and Pytesseract, successfully preprocessing more than
                 60,000 images.
               </li>
               <li>
-                Deployed containerized projects on Azure for machine learning,
+                I deployed containerized projects on Azure for machine learning,
                 analyzed data for model definition and preprocessing, and
                 developed RESTful APIs with multi-protocol support and
                 monitoring tools.
               </li>
               <li>
-                Experienced with VPN and communication protocols to ensure
+                I am experienced with VPN and communication protocols to ensure
                 solution stability across systems.
               </li>
               <li>
-                Additionally, leveraged Power Automate and Power Apps to improve
+                I leveraged Power Automate and Power Apps to improve
                 customer response and process efficiency.
               </li>
             </ul>
@@ -106,11 +113,11 @@ function App() {
             </h5>
             <ul className="rounded-list">
               <li>
-                Experienced in C++, C, and Java programming, including mentoring
+                I am additionally experienced in C++, C, and Java programming, including mentoring
                 and explaining concepts to students.
               </li>
               <li>
-                Additionally responsible for creating websites, REST APIs, and
+                I was responsible for creating websites, REST APIs, and
                 Android applications to demonstrate and explore new technologies
                 with clients.
               </li>
@@ -124,19 +131,19 @@ function App() {
             </h5>
             <ul className="rounded-list">
               <li>
-                Implemented and refactored Kotlin code with Firebase and RxJava,
+                I have implemented and refactored Kotlin code with Firebase and RxJava,
                 developed JUnit tests, and built UI functionalities with
                 Cucumber while testing the Emognition Android app for physical
                 signal examination, serving 100+ active testers and users.
               </li>
               <li>
-                Additionally, developed secure RESTful APIs to protect
+                I developed secure RESTful APIs to protect
                 user-generated data, extended Node.js/Python scripts for data
                 scraping, and optimized SQL/NoSQL databases for analysis and
                 performance.
               </li>
               <li>
-                Collaborated via Git/GitHub, applied Agile practices, and
+                I collaborated via Git/GitHub, applied Agile practices, and
                 created responsive React.js front-ends.
               </li>
             </ul>
