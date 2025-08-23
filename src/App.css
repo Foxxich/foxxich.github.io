@@ -30,6 +30,14 @@ body {
   padding: 0 20px; /* horizontal spacing */
 }
 
+/* Ensure the collapsed navbar has a contrasting background on mobile */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: var(--color-primary); /* Use dark olive green for background */
+    padding: 10px; /* Optional: Add some padding for better appearance */
+  }
+}
+
 .navbar#navbar_top {
   background-color: var(--color-primary) !important;
 }

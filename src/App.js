@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Nav, Navbar, Card } from "react-bootstrap";
 import logo from "./assets/fox-removebg-preview.png";
 
 function App() {
+  const [expanded, setExpanded] = useState(false); // State to track navbar collapse
+
+  // Handler to close navbar when a nav link is clicked
+  const handleNavClick = () => {
+    setExpanded(false);
+  };
+
   return (
     <div className="App">
-      <Navbar expand="lg" id="navbar_top" fixed="top">
+      <Navbar
+        expand="lg"
+        id="navbar_top"
+        fixed="top"
+        expanded={expanded}
+        onToggle={() => setExpanded(!expanded)} // Toggle state on navbar click
+      >
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -20,14 +33,27 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link href="#">Home</Nav.Link>
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#experience">Experience</Nav.Link>
-              <Nav.Link href="#education">Education</Nav.Link>
-              <Nav.Link href="#skills">Skills</Nav.Link>
-              <Nav.Link href="#languages">Languages</Nav.Link>
-              <Nav.Link href="#certificates">Certificates</Nav.Link>
-              <Nav.Link href="#links">Useful links</Nav.Link>
+              <Nav.Link href="#about" onClick={handleNavClick}>
+                About
+              </Nav.Link>
+              <Nav.Link href="#experience" onClick={handleNavClick}>
+                Experience
+              </Nav.Link>
+              <Nav.Link href="#education" onClick={handleNavClick}>
+                Education
+              </Nav.Link>
+              <Nav.Link href="#skills" onClick={handleNavClick}>
+                Skills
+              </Nav.Link>
+              <Nav.Link href="#languages" onClick={handleNavClick}>
+                Languages
+              </Nav.Link>
+              <Nav.Link href="#certificates" onClick={handleNavClick}>
+                Certificates
+              </Nav.Link>
+              <Nav.Link href="#links" onClick={handleNavClick}>
+                Useful links
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -37,7 +63,7 @@ function App() {
         <p className="lead">Master Engineer and Full-Stack Developer</p>
         <p className="contact-info">
           <span className="email">vadimliss77 at gmail.com</span> |
-          <span className="phone">+48884001830</span> | Dusseldorf
+          <span className="phone">+48884001830</span> | Wrocław
         </p>
       </Container>
       <Container data-aos="fade-in">
@@ -109,7 +135,7 @@ function App() {
               Information Technologies Tutor - Freelance
             </h4>
             <h5 className="card-subtitle">
-              <b>Wrocław | Sep 2023 - Present</b>
+              <b>W., | Sep 2023 - Present</b>
             </h5>
             <ul className="rounded-list">
               <li>
@@ -127,7 +153,7 @@ function App() {
               Junior Android Developer - Emognition
             </h4>
             <h5 className="card-subtitle">
-              <b>Wrocław | Feb 2022 - Oct 2022</b>
+              <b>W., | Feb 2022 - Oct 2022</b>
             </h5>
             <ul className="rounded-list">
               <li>
